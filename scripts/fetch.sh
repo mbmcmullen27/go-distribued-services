@@ -1,6 +1,6 @@
 for i in $(cat repos); do
   repo=${i##*/} 
-  if [ -d "project/repos" ]; then
+  if [ -d "project/$repo" ]; then
     (cd projects && git clone $i)
   else
     echo "project/$repo exists..."
