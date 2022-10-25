@@ -1,4 +1,4 @@
-# go-distribued-services
+# go-distribued-services  
 
 ## Chapter 1: Build a JSON over HTTP Server
 - projects/proglog/internal/server/log.go
@@ -21,3 +21,8 @@
   If your handlers become much more complicated than this, then you should move the code out, move request and response handling into HTTP middleware, and move business logic further down the stack.  
   <br />
   - **note:** what do you call this type of design violation? you should apply the same philosophy to stored procedures
+
+
+### Repo Appendix
+```sh
+alias bake=(cd )

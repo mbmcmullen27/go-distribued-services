@@ -6,13 +6,14 @@ repos:
 	./scripts/fetch.sh	
 
 .PHONY: push
-push:
-	./scripts/push.sh	
+push: commit
+	git commit -a --allow-empty-message -m "$M" 
+	./scripts/push.sh
 
 .PHONY: commit
 commit:
-	./scripts/commit.sh
+	./scripts/commit.sh "$M" || echo "Problem committing sub repos"
 
 .PHONY: test-api
-test-api:
-	./scripts/test-api
+test-api: 
+	./scripts/test.sh
