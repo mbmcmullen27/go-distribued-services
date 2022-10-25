@@ -8,6 +8,7 @@ repos:
 .PHONY: push
 push: commit
 	git commit -a --allow-empty-message -m "$M" 
+	git push
 	./scripts/push.sh
 
 .PHONY: commit
